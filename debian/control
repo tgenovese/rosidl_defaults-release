@@ -1,0 +1,12 @@
+Source: ros-crystal-rosidl-default-runtime
+Section: misc
+Priority: extra
+Maintainer: Dirk Thomas <dthomas@osrfoundation.org>
+Build-Depends: debhelper (>= 9.0.0), ros-crystal-ament-cmake, ros-crystal-ament-lint-auto, ros-crystal-ament-lint-common, ros-crystal-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-crystal-rosidl-default-runtime
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-crystal-rosidl-generator-cpp, ros-crystal-rosidl-generator-py, ros-crystal-rosidl-typesupport-c, ros-crystal-rosidl-typesupport-cpp, ros-crystal-rosidl-typesupport-introspection-c, ros-crystal-rosidl-typesupport-introspection-cpp, ros-crystal-ros-workspace
+Description: A configuration package defining the runtime for the ROS interfaces.
