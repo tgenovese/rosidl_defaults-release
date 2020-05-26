@@ -1,0 +1,12 @@
+Source: ros-foxy-rosidl-default-generators
+Section: misc
+Priority: optional
+Maintainer: Dirk Thomas <dthomas@osrfoundation.org>
+Build-Depends: debhelper (>= 9.0.0), ros-foxy-ament-cmake, ros-foxy-ament-lint-auto, ros-foxy-ament-lint-common, ros-foxy-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-foxy-rosidl-default-generators
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-foxy-ament-cmake-core, ros-foxy-rosidl-cmake, ros-foxy-rosidl-generator-c, ros-foxy-rosidl-generator-cpp, ros-foxy-rosidl-generator-py, ros-foxy-rosidl-typesupport-c, ros-foxy-rosidl-typesupport-cpp, ros-foxy-rosidl-typesupport-introspection-c, ros-foxy-rosidl-typesupport-introspection-cpp, ros-foxy-ros-workspace
+Description: A configuration package defining the default ROS interface generators.
