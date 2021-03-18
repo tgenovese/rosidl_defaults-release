@@ -2,9 +2,9 @@ This document is a declaration of software quality for the `rosidl_default_runti
 
 # `rosidl_default_runtime` Quality Declaration
 
-The package `rosidl_default_runtime` claims to be in the **Quality Level 4** category.
+The package `rosidl_default_runtime` claims to be in the **Quality Level 1** category as long as it is used with a **Quality Level 1** middleware.
 
-Below are the rationales, notes, and caveats for this claim, organized by each requirement listed in the [Package Requirements for Quality Level 4 in REP-2004](https://www.ros.org/reps/rep-2004.html).
+Below are the rationales, notes, and caveats for this claim, organized by each requirement listed in the [Package Requirements for Quality Level 2 in REP-2004](https://www.ros.org/reps/rep-2004.html).
 
 ## Version Policy [1]
 
@@ -14,7 +14,7 @@ Below are the rationales, notes, and caveats for this claim, organized by each r
 
 ### Version Stability [1.ii]
 
-`rosidl_default_runtime` is not yet at a stable version, i.e. `>= 1.0.0`.
+`rosidl_default_runtime` is at a stable version i.e. `>= 1.0.0`.  The current version can be found in its [package.xml](./package.xml), and its change history can be found in its [CHANGELOG](./CHANGELOG.md).
 
 ### Public API Declaration [1.iii]
 
@@ -86,10 +86,16 @@ Results of linter tests can be found [here](https://ci.ros2.org/view/nightly/job
 
 ### Direct Runtime ROS Dependencies [5.i]/[5.ii]
 
-`rosidl_default_runtime` has the following group dependencies:
-* `rosidl_runtime_packages`
-* `rosidl_typesupport_c_packages`
-* `rosidl_typesupport_cpp_packages`
+`rosidl_default_runtime` has the following group dependencies all of which are at **Quality Level 1** for **Quality Level 1** middlewares:
+* `rosidl_runtime_packages` At the time of writing, this group contains the following runtime packages:
+  - `rosidl_runtime_c` [QUALITY DECLARATION](https://github.com/ros2/rosidl/blob/master/rosidl_runtime_c/QUALITY_DECLARATION.md)
+  - `rosidl_runtime_cpp` [QUALITY DECLARATION](https://github.com/ros2/rosidl/blob/master/rosidl_runtime_cpp/QUALITY_DECLARATION.md)
+  - `rosidl_typesupport_c` [QUALITY DECLARATION](https://github.com/ros2/rosidl_typesupport/blob/master/rosidl_typesupport_c/QUALITY_DECLARATION.md)
+  - `rosidl_typesupport_cpp` [QUALITY DECLARATION](https://github.com/ros2/rosidl_typesupport/blob/master/rosidl_typesupport_cpp/QUALITY_DECLARATION.md)
+* `rosidl_typesupport_c_packages` At the time of writing, this group does not contain middleware independent runtime dependencies. It will likely include `typesupport_c` packages for your chosen middleware, which need to be **Quality Level 1** for this package to be considered **Quality Level 1**.
+* `rosidl_typesupport_cpp_packages` At the time of writing, this group does not contain middleware independent runtime dependencies. It will likely include `typesupport_cpp` packages for your chosen middleware, which need to be **Quality Level 1** for this package to be considered **Quality Level 1**.
+
+Note that interface generation or interface typesupport dependencies used only by Python client libraries are not considered in this assessment.
 
 ### Direct Runtime Non-ROS Dependencies [5.iii]
 `rosidl_default_runtime` does not have any runtime non-ROS dependencies.
@@ -104,6 +110,8 @@ Currently nightly results can be seen here:
 * [mac_osx_release](https://ci.ros2.org/view/nightly/job/nightly_osx_release/lastBuild/testReport/rosidl_default_runtime/)
 * [windows_release](https://ci.ros2.org/view/nightly/job/nightly_win_rel/lastBuild/testReport/rosidl_default_runtime/)
 
-## Vulnerability Disclosure Policy [7.i]
+## Security [7]
 
-This package does not yet have a Vulnerability Disclosure Policy
+### Vulnerability Disclosure Policy [7.i]
+
+This package conforms to the Vulnerability Disclosure Policy in [REP-2006](https://www.ros.org/reps/rep-2006.html).
