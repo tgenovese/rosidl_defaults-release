@@ -2,19 +2,19 @@ This document is a declaration of software quality for the `rosidl_default_runti
 
 # `rosidl_default_runtime` Quality Declaration
 
-The package `rosidl_default_runtime` claims to be in the **Quality Level 4** category.
+The package `rosidl_default_runtime` claims to be in the **Quality Level 1** category as long as it is used with a **Quality Level 1** middleware.
 
-Below are the rationales, notes, and caveats for this claim, organized by each requirement listed in the [Package Requirements for Quality Level 4 in REP-2004](https://www.ros.org/reps/rep-2004.html).
+Below are the rationales, notes, and caveats for this claim, organized by each requirement listed in the [Package Requirements for Quality Level 2 in REP-2004](https://www.ros.org/reps/rep-2004.html).
 
 ## Version Policy [1]
 
 ### Version Scheme [1.i]
 
-`rosidl_default_runtime` uses `semver` according to the recommendation for ROS Core packages in the [ROS 2 Developer Guide](https://index.ros.org/doc/ros2/Contributing/Developer-Guide/#versioning).
+`rosidl_default_runtime` uses `semver` according to the recommendation for ROS Core packages in the [ROS 2 Developer Guide](https://docs.ros.org/en/foxy/Contributing/Developer-Guide.html#versioning).
 
 ### Version Stability [1.ii]
 
-`rosidl_default_runtime` is not yet at a stable version, i.e. `>= 1.0.0`.
+`rosidl_default_runtime` is at a stable version i.e. `>= 1.0.0`.  The current version can be found in its [package.xml](./package.xml), and its change history can be found in its [CHANGELOG](./CHANGELOG.md).
 
 ### Public API Declaration [1.iii]
 
@@ -30,11 +30,11 @@ Below are the rationales, notes, and caveats for this claim, organized by each r
 
 ## Change Control Process [2]
 
-`rosidl_default_runtime` follows the recommended guidelines for ROS Core packages in the [ROS 2 Developer Guide](https://index.ros.org/doc/ros2/Contributing/Developer-Guide/#package-requirements).
+`rosidl_default_runtime` follows the recommended guidelines for ROS Core packages in the [ROS 2 Developer Guide](https://docs.ros.org/en/foxy/Contributing/Developer-Guide.html#quality-practices).
 
 ### Change Requests [2.i]
 
-All changes will occur through a pull request, check [ROS 2 Developer Guide](https://index.ros.org/doc/ros2/Contributing/Developer-Guide/#change-control-process) for additional information.
+All changes will occur through a pull request, check [ROS 2 Developer Guide](https://docs.ros.org/en/foxy/Contributing/Developer-Guide.html#change-control-process) for additional information.
 
 ### Contributor Origin [2.ii]
 
@@ -78,18 +78,24 @@ There are no source code files in this package and therefore no files are curren
 
 ### Linters and Static Analysis [4.v]
 
-`rmw` uses and passes all the standard linters and static analysis tools for a CMake package as described in the [ROS 2 Developer Guide](https://index.ros.org/doc/ros2/Contributing/Developer-Guide/#linters).
+`rmw` uses and passes all the standard linters and static analysis tools for a CMake package as described in the [ROS 2 Developer Guide](https://docs.ros.org/en/foxy/Contributing/Developer-Guide.html#linters-and-static-analysis).
 
-Results of linter tests can be found [here](https://ci.ros2.org/view/nightly/job/nightly_linux_release/lastBuild/testReport/rosidl_default_runtime/).
+Results of linter tests can be found [here](http://build.ros2.org/view/Fci/job/Fci__nightly-release_ubuntu_focal_amd64/206/testReport/rosidl_default_runtime/).
 
 ## Dependencies [5]
 
 ### Direct Runtime ROS Dependencies [5.i]/[5.ii]
 
-`rosidl_default_runtime` has the following group dependencies:
-* `rosidl_runtime_packages`
-* `rosidl_typesupport_c_packages`
-* `rosidl_typesupport_cpp_packages`
+`rosidl_default_runtime` has the following group dependencies all of which are at **Quality Level 1** for **Quality Level 1** middlewares:
+* `rosidl_runtime_packages` At the time of writing, this group contains the following runtime packages:
+  - `rosidl_runtime_c` [QUALITY DECLARATION](https://github.com/ros2/rosidl/blob/foxy/rosidl_runtime_c/QUALITY_DECLARATION.md)
+  - `rosidl_runtime_cpp` [QUALITY DECLARATION](https://github.com/ros2/rosidl/blob/foxy/rosidl_runtime_cpp/QUALITY_DECLARATION.md)
+  - `rosidl_typesupport_c` [QUALITY DECLARATION](https://github.com/ros2/rosidl_typesupport/blob/foxy/rosidl_typesupport_c/QUALITY_DECLARATION.md)
+  - `rosidl_typesupport_cpp` [QUALITY DECLARATION](https://github.com/ros2/rosidl_typesupport/blob/foxy/rosidl_typesupport_cpp/QUALITY_DECLARATION.md)
+* `rosidl_typesupport_c_packages` At the time of writing, this group does not contain middleware independent runtime dependencies. It will likely include `typesupport_c` packages for your chosen middleware, which need to be **Quality Level 1** for this package to be considered **Quality Level 1**.
+* `rosidl_typesupport_cpp_packages` At the time of writing, this group does not contain middleware independent runtime dependencies. It will likely include `typesupport_cpp` packages for your chosen middleware, which need to be **Quality Level 1** for this package to be considered **Quality Level 1**.
+
+Note that interface generation or interface typesupport dependencies used only by Python client libraries are not considered in this assessment.
 
 ### Direct Runtime Non-ROS Dependencies [5.iii]
 `rosidl_default_runtime` does not have any runtime non-ROS dependencies.
@@ -98,12 +104,14 @@ Results of linter tests can be found [here](https://ci.ros2.org/view/nightly/job
 
 `rosidl_default_runtime` supports all of the tier 1 platforms as described in [REP-2000](https://www.ros.org/reps/rep-2000.html#support-tiers), and tests each change against all of them.
 
-Currently nightly results can be seen here:
-* [linux-aarch64_release](https://ci.ros2.org/view/nightly/job/nightly_linux-aarch64_release/lastBuild/testReport/rosidl_default_runtime/)
-* [linux_release](https://ci.ros2.org/view/nightly/job/nightly_linux_release/lastBuild/testReport/rosidl_default_runtime/)
-* [mac_osx_release](https://ci.ros2.org/view/nightly/job/nightly_osx_release/lastBuild/testReport/rosidl_default_runtime/)
-* [windows_release](https://ci.ros2.org/view/nightly/job/nightly_win_rel/lastBuild/testReport/rosidl_default_runtime/)
+Though there are no nightly jobs for foxy outside of linux, each change is tested on ci.ros2.org.
+* [linux-aarch64](https://ci.ros2.org/job/ci_linux-aarch64)
+* [linux](https://ci.ros2.org/job/ci_linux)
+* [mac_osx](https://ci.ros2.org/job/ci_osx)
+* [windows](https://ci.ros2.org/job/ci_windows)
 
-## Vulnerability Disclosure Policy [7.i]
+## Security [7]
 
-This package does not yet have a Vulnerability Disclosure Policy
+### Vulnerability Disclosure Policy [7.i]
+
+This package conforms to the Vulnerability Disclosure Policy in [REP-2006](https://www.ros.org/reps/rep-2006.html).
