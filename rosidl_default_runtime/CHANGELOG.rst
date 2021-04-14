@@ -2,20 +2,12 @@
 Changelog for package rosidl_default_runtime
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1.1.1 (2021-04-06)
+1.0.1 (2021-04-14)
 ------------------
-* updating quality declaration links (re: `ros2/docs.ros2.org#52 <https://github.com/ros2/docs.ros2.org/issues/52>`_) (`#18 <https://github.com/ros2/rosidl_defaults/issues/18>`_)
-* Contributors: shonigmann
-
-1.1.0 (2021-03-18)
-------------------
-* Update QD to QL 1 (`#15 <https://github.com/ros2/rosidl_defaults/issues/15>`_)
-* Update maintainers (`#13 <https://github.com/ros2/rosidl_defaults/issues/13>`_)
-* Updated QD to 2 in README.md (`#12 <https://github.com/ros2/rosidl_defaults/issues/12>`_)
-* Update rosidl_default_runtime QD to QL2. (`#11 <https://github.com/ros2/rosidl_defaults/issues/11>`_)
-* Bump the QUALITY_DECLARATION to level 3. (`#10 <https://github.com/ros2/rosidl_defaults/issues/10>`_)
+* Update quality declaration links (re: `ros2/docs.ros2.org#52 <https://github.com/ros2/docs.ros2.org/issues/52>`_) (`#19 <https://github.com/ros2/rosidl_defaults/issues/19>`_)
+* Update QD to QL 1 (`#16 <https://github.com/ros2/rosidl_defaults/issues/16>`_)
 * Add Security Vulnerability Policy pointing to REP-2006. (`#9 <https://github.com/ros2/rosidl_defaults/issues/9>`_)
-* Contributors: Alejandro Hernández Cordero, Chris Lalancette, Michel Hidalgo, Shane Loretz, Stephen Brawner
+* Contributors: Alejandro Hernández Cordero, Chris Lalancette, Michel Hidalgo, Simon Honigmann, Stephen Brawner
 
 1.0.0 (2020-05-26)
 ------------------
