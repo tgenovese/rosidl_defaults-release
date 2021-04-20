@@ -1,0 +1,12 @@
+Source: ros-galactic-rosidl-default-runtime
+Section: misc
+Priority: optional
+Maintainer: Shane Loretz <sloretz@openrobotics.org>
+Build-Depends: debhelper (>= 9.0.0), ros-galactic-ament-cmake, ros-galactic-ament-lint-auto, ros-galactic-ament-lint-common, ros-galactic-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-galactic-rosidl-default-runtime
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-galactic-rosidl-generator-py, ros-galactic-rosidl-runtime-c, ros-galactic-rosidl-runtime-cpp, ros-galactic-rosidl-typesupport-c, ros-galactic-rosidl-typesupport-cpp, ros-galactic-rosidl-typesupport-introspection-c, ros-galactic-rosidl-typesupport-introspection-cpp, ros-galactic-ros-workspace
+Description: A configuration package defining the runtime for the ROS interfaces.
