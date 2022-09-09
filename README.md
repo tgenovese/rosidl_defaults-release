@@ -1,3 +1,28 @@
+## rosidl_defaults (rolling) - 1.4.0-1
+
+The packages in the `rosidl_defaults` repository were released into the `rolling` distro by running `/usr/bin/bloom-release -r rolling rosidl_defaults` on `Fri, 09 Sep 2022 20:50:46 -0000`
+
+These packages were released:
+- `rosidl_default_generators`
+- `rosidl_default_runtime`
+
+Version of package(s) in repository `rosidl_defaults`:
+
+- upstream repository: https://github.com/ros2/rosidl_defaults.git
+- release repository: https://github.com/ros2-gbp/rosidl_defaults-release.git
+- rosdistro version: `1.3.0-1`
+- old version: `1.3.0-1`
+- new version: `1.4.0-1`
+
+Versions of tools used:
+
+- bloom version: `0.11.2`
+- catkin_pkg version: `0.5.2`
+- rosdep version: `0.22.1`
+- rosdistro version: `0.9.0`
+- vcstools version: `0.1.42`
+
+
 ## rosidl_defaults (rolling) - 1.3.0-1
 
 The packages in the `rosidl_defaults` repository were released into the `rolling` distro by running `/usr/local/bin/bloom-release --non-interactive -r rolling rosidl_defaults` on `Wed, 04 May 2022 20:12:08 -0000`
