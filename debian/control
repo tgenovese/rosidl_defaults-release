@@ -1,0 +1,12 @@
+Source: ros-rolling-rosidl-default-generators
+Section: misc
+Priority: optional
+Maintainer: Shane Loretz <sloretz@openrobotics.org>
+Build-Depends: debhelper (>= 9.0.0), ros-rolling-ament-cmake, ros-rolling-ament-lint-auto <!nocheck>, ros-rolling-ament-lint-common <!nocheck>, ros-rolling-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-rolling-rosidl-default-generators
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-rolling-action-msgs, ros-rolling-ament-cmake-core, ros-rolling-rosidl-core-generators, ros-rolling-service-msgs, ros-rolling-ros-workspace
+Description: A configuration package defining the default ROS interface generators.
