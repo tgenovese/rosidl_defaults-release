@@ -1,0 +1,101 @@
+ros-rolling-rosidl-default-runtime (1.6.0-2noble) noble; urgency=high
+
+
+
+ -- Shane Loretz <sloretz@openrobotics.org>  Fri, 28 Apr 2023 00:00:00 -0000
+
+ros-rolling-rosidl-default-runtime (1.5.0-2noble) noble; urgency=high
+
+  * add service_msgs depend (#24 <https://github.com/ros2/rosidl_defaults/issues/24>)
+  * [rolling] Update maintainers - 2022-11-07 (#25 <https://github.com/ros2/rosidl_defaults/issues/25>)
+  * Contributors: Audrow Nash, Brian
+
+ -- Shane Loretz <sloretz@openrobotics.org>  Mon, 13 Feb 2023 00:00:00 -0000
+
+ros-rolling-rosidl-default-runtime (1.4.0-2noble) noble; urgency=high
+
+  * Move dependencies to rosidl_core and depend on action_msgs (#22 <https://github.com/ros2/rosidl_defaults/issues/22>)
+    Move implementation to new packages rosidl_core_generators and rosidl_runtime_generators
+    The new packages are located in a separate repository: https://github.com/ros2/rosidl_core.git
+    rosidl_defaults now depends on the new packages, plus message definitions required for Actions (namely action_msgs).
+    This allows users to avoid having to explictly depend on action_msgs.
+  * Contributors: Jacob Perron
+
+ -- Shane Loretz <sloretz@openrobotics.org>  Thu, 08 Sep 2022 00:00:00 -0000
+
+ros-rolling-rosidl-default-runtime (1.3.0-2noble) noble; urgency=high
+
+
+
+ -- Shane Loretz <sloretz@openrobotics.org>  Wed, 04 May 2022 00:00:00 -0000
+
+ros-rolling-rosidl-default-runtime (1.2.0-2noble) noble; urgency=high
+
+  * Unroll group dependencies (#20 <https://github.com/ros2/rosidl_defaults/issues/20>)
+  * Contributors: Shane Loretz
+
+ -- Shane Loretz <sloretz@openrobotics.org>  Thu, 31 Mar 2022 00:00:00 -0000
+
+ros-rolling-rosidl-default-runtime (1.1.1-2noble) noble; urgency=high
+
+  * updating quality declaration links (re: ros2/docs.ros2.org#52 <https://github.com/ros2/docs.ros2.org/issues/52>) (#18 <https://github.com/ros2/rosidl_defaults/issues/18>)
+  * Contributors: shonigmann
+
+ -- Shane Loretz <sloretz@openrobotics.org>  Tue, 06 Apr 2021 00:00:00 -0000
+
+ros-rolling-rosidl-default-runtime (1.1.0-2noble) noble; urgency=high
+
+  * Update QD to QL 1 (#15 <https://github.com/ros2/rosidl_defaults/issues/15>)
+  * Update maintainers (#13 <https://github.com/ros2/rosidl_defaults/issues/13>)
+  * Updated QD to 2 in README.md (#12 <https://github.com/ros2/rosidl_defaults/issues/12>)
+  * Update rosidl_default_runtime QD to QL2. (#11 <https://github.com/ros2/rosidl_defaults/issues/11>)
+  * Bump the QUALITY_DECLARATION to level 3. (#10 <https://github.com/ros2/rosidl_defaults/issues/10>)
+  * Add Security Vulnerability Policy pointing to REP-2006. (#9 <https://github.com/ros2/rosidl_defaults/issues/9>)
+  * Contributors: Alejandro Hernández Cordero, Chris Lalancette, Michel Hidalgo, Shane Loretz, Stephen Brawner
+
+ -- Shane Loretz <sloretz@openrobotics.org>  Thu, 18 Mar 2021 00:00:00 -0000
+
+ros-rolling-rosidl-default-runtime (1.0.0-2noble) noble; urgency=high
+
+  * Some simple feature documentation in the README (#8 <https://github.com/ros2/rosidl_defaults/issues/8>)
+  * Add Readme and QD for rosidl_default_runtime (#7 <https://github.com/ros2/rosidl_defaults/issues/7>)
+  * Contributors: brawner
+
+ -- Shane Loretz <sloretz@openrobotics.org>  Tue, 26 May 2020 00:00:00 -0000
+
+ros-rolling-rosidl-default-runtime (0.9.0-2noble) noble; urgency=high
+
+  * Removed rosidl_generator_cpp as dependency and add rosidl_runtime_c and rosidl_runtime_cpp (#5 <https://github.com/ros2/rosidl_defaults/issues/5>)
+  * Contributors: Alejandro Hernández Cordero
+
+ -- Shane Loretz <sloretz@openrobotics.org>  Sat, 25 Apr 2020 00:00:00 -0000
+
+ros-rolling-rosidl-default-runtime (0.8.0-2noble) noble; urgency=high
+
+
+
+ -- Shane Loretz <sloretz@openrobotics.org>  Thu, 26 Sep 2019 00:00:00 -0000
+
+ros-rolling-rosidl-default-runtime (0.7.0-2noble) noble; urgency=high
+
+
+
+ -- Shane Loretz <sloretz@openrobotics.org>  Sun, 14 Apr 2019 00:00:00 -0000
+
+ros-rolling-rosidl-default-runtime (0.6.0-2noble) noble; urgency=high
+
+  * update manifest to adhere to tag order in schema (#3 <https://github.com/ros2/rosidl_defaults/issues/3>)
+  * Contributors: Dirk Thomas
+
+ -- Shane Loretz <sloretz@openrobotics.org>  Fri, 16 Nov 2018 00:00:00 -0000
+
+ros-rolling-rosidl-default-runtime (0.5.0-2noble) noble; urgency=high
+
+  * Merge pull request #26 <https://github.com/ros2/rosidl_defaults/issues/26> from ros2/remove-direct-vendor-typesupport-deps
+  * add and use groups for generator and runtime packages (#25 <https://github.com/ros2/rosidl_defaults/issues/25>)
+  * Merge pull request #22 <https://github.com/ros2/rosidl_defaults/issues/22> from ros2/use_typesupport_group
+  * Contributors: Dirk Thomas, Jackie Kay, Mikael Arguedas, Steven! Ragnarök, Tully Foote, William Woodall, gerkey
+
+ -- Shane Loretz <sloretz@openrobotics.org>  Sun, 24 Jun 2018 00:00:00 -0000
+
+
