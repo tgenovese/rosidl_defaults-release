@@ -1,4 +1,4 @@
-release_repo_url: git@github.com:ros2-gbp/rosidl_defaults-release
+release_repo_url: git@github.com:tgenovese/rosidl_defaults-release.git
 tracks:
   bouncy:
     actions:
